@@ -1,0 +1,85 @@
+### Site Settings ###
+source              : ../
+collections_dir     : site
+data_dir            : site/_data
+baseurl             : ""
+theme               : insights4you-jekyll-theme
+repository          : marciopaiva/insights4you-site
+open_new_tab        : false
+
+### Navbar Settings ###
+nav_exclude:
+  - site/pages/tags.html
+  - site/pages/404.html
+  - site/pages/index.md
+  - site/pages/documentation/**
+
+
+### Author Info ###
+author:
+  name              : Marcio Paiva Barbosa
+  image             : assets/img/logo.png
+  github            : marciopaiva
+
+
+### Posts ###
+permalink: /blog/:title
+
+disqus:
+  shortname: your-disqus-shortname
+
+### Collections ###
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name
+  elements:
+    output: true
+
+
+### Analytics ###
+analytics:
+  enabled: true
+  google:
+    tracking_id: google-tracking-id
+
+
+### Buy me a coffee ###
+# See https://www.buymeacoffee.com/
+buymeacoffee:
+  enabled: false
+  username: your_username
+  color: "#007bff"
+  message: "Thank you for visiting."                    # Message to be displayed aside from the button for a few seconds.
+  description: "Support me on Buy me a coffee!"
+
+
+### Defaults for collections ###
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "elements"
+    values:
+      layout: "element"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: false
+
+plugins:
+  - jekyll-default-layout
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-include-cache
+  - jemoji
+
+
+exclude:
+  - test/
+  - assets/icons/site.webmanifest

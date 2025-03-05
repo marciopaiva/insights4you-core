@@ -12,7 +12,9 @@
 }
 
 #theme-toggler:before {
-  @include themed(content, "\f186", "\f185");
+@include themed(content, "\f186", "\f185");
+font-family: "Font Awesome 5 Free";
+font-weight: 900;
 }
 
 .navbar-themed {
