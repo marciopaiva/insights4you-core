@@ -21,4 +21,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "kramdown", "~> 2.3.1"
   spec.add_runtime_dependency "kramdown-parser-gfm", "~> 1.1.0"
   spec.add_runtime_dependency "webrick", "~> 1.7"
+  spec.add_runtime_dependency "faraday", "~> 2.0"
 end
