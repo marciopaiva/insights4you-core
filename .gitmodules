@@ -1,0 +1,3 @@
+[submodule "site"]
+	path = site
+	url = https://github.com/marciopaiva/insights4you-site.git
