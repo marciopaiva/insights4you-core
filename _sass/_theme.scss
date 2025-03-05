@@ -1,3 +1,6 @@
+// _sass/_theme.scss
+
+
 @mixin themed($property, $light-value, $dark-value) {
   [data-theme="light"] & {
     #{$property}: $light-value;
@@ -9,7 +12,7 @@
 }
 
 #theme-toggler:before {
-  @include themed(content, "🌙", "🌞");
+  @include themed(content, "\f186", "\f185");
 }
 
 .navbar-themed {
