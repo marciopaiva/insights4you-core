@@ -1,0 +1,63 @@
+.
+├── LICENSE
+├── README.md
+├── _includes
+│   ├── 404.html
+│   ├── about
+│   │   ├── skills.html
+│   │   └── timeline.html
+│   ├── analytics.html
+│   ├── blog
+│   │   ├── disqus.html
+│   │   ├── index.html
+│   │   ├── post-card.html
+│   │   ├── search.html
+│   │   └── tags.html
+│   ├── elements
+│   │   ├── button.html
+│   │   ├── carousel.html
+│   │   ├── figure.html
+│   │   ├── github-edit-footer.html
+│   │   ├── highlight.html
+│   │   ├── list.html
+│   │   └── video.html
+│   ├── footer.html
+│   ├── head.html
+│   ├── landing.html
+│   ├── navbar.html
+│   ├── projects
+│   │   ├── index.html
+│   │   └── project-card.html
+│   ├── scripts.html
+│   └── social.html
+├── _layouts
+│   ├── default.html
+│   ├── element.html
+│   ├── page.html
+│   └── post.html
+├── _sass
+│   ├── _404.scss
+│   ├── _base.scss
+│   ├── _blog.scss
+│   ├── _footer.scss
+│   ├── _landing.scss
+│   ├── _markdown.scss
+│   ├── _navbar.scss
+│   ├── _projects.scss
+│   ├── _theme-dark.scss
+│   ├── _theme.scss
+│   ├── _timeline.scss
+│   ├── _variables.scss
+│   ├── autumn.scss
+│   ├── insights4you.scss
+│   └── native.scss
+├── assets
+│   ├── css
+│   │   └── style.scss
+│   ├── favicon.ico
+│   └── js
+│       └── theme.js
+├── insights4you-jekyll-theme.gemspec
+└── temp
+
+10 directories, 50 files

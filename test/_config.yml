@@ -4,7 +4,6 @@ collections_dir     : site
 data_dir            : site/_data
 baseurl             : ""
 theme               : insights4you-jekyll-theme
-repository          : marciopaiva/insights4you-site
 open_new_tab        : false
 
 ### Navbar Settings ###
@@ -19,8 +18,12 @@ nav_exclude:
 author:
   name              : Marcio Paiva Barbosa
   image             : assets/img/logo.png
-  github            : marciopaiva
 
+
+### GitHub Repositories ###
+github:
+  user: marciopaiva
+  token: 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
 
 ### Posts ###
 permalink: /blog/:title
@@ -73,13 +76,9 @@ defaults:
       comments: false
 
 plugins:
-  - jekyll-default-layout
-  - jekyll-gist
   - jekyll-github-metadata
-  - jekyll-include-cache
   - jemoji
 
 
 exclude:
   - test/
-  - assets/icons/site.webmanifest

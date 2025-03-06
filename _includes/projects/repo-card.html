@@ -1,0 +1,65 @@
+
+<!-- Default Styles -->
+{%- assign card_style  = '' -%}
+{%- assign text_style  = 'text-themed' -%}
+{%- assign badge_style = 'badge-dark' -%}
+
+<!-- Custom Styles -->
+{%- if repo.stargazers_count == 1 -%}
+  {%- assign card_style  = 'fill' -%}
+  {%- assign card_style =  'primary' | prepend: 'border border-' -%}
+  {%- assign badge_style = 'primary' | prepend: 'badge-' -%}
+{%- endif -%}
+
+{%- if repo.stargazers_count >= 2 -%}
+  {%- assign card_style  = 'fill' -%}
+  {%- assign card_style = 'success' | prepend: 'border border-' -%}
+  {%- assign badge_style = 'success' | prepend: 'badge-' -%}
+{%- endif -%}
+
+{%- if repo.stargazers_count >= 5 -%}
+  {%- assign card_style  = 'fill' -%}
+  {%- assign card_style =  'success' | prepend: 'border border-' -%}
+  {%- assign badge_style = 'success' | prepend: 'badge-' -%}
+{%- endif -%}
+
+{%- if repo.stargazers_count >= 10 -%}
+  {%- assign card_style  = 'fill' -%}
+  {%- assign card_style =  'danger' | prepend: 'border border-' -%}
+  {%- assign badge_style = 'danger' | prepend: 'badge-' -%}
+{%- endif -%}
+
+<!-- Months Translate -->
+{% assign months = "Janeiro,Fevereiro,Março,Abril,Maio,Junho,Julho,Agosto,Setembro,Outubro,Novembro,Dezembro" | split: "," %}
+
+<div class="col-lg-6 my-3 wow animated fadeIn" data-wow-delay=".15s">
+    <a href="{{ repo.html_url }}" class="post card {{ card_style }}" target="_blank" >
+      <div class="card-body {{ text_style }}">
+        <h3 class="card-title"><i class="fab fa-github"></i> {{ repo.name  }}</h3>
+        <p class="card-text">
+            {% for tag in repo.topics %}
+            <span class="badge {{ badge_style }}">{{ tag }}</span>
+            {% endfor %}
+        </p>
+        <p class="card-text">
+          {{ repo.description }}          
+        </p>
+        <p class="card-text">
+          <i class="fas fa-balance-scale"></i>  {{ repo.license.name }}
+        </p>
+      </div>
+      <div class="card-footer {{ text_style }} d-flex justify-content-between align-items-center">
+        <div>
+          <i class="far fa-star"></i> {{ repo.stargazers_count }} 
+          <i class="fas fa-code-branch"></i> {{ repo.forks }} 
+          <i class="far fa-eye"></i> {{ repo.watchers }}
+        </div>
+        <div>
+          <i class="far fa-calendar-alt"></i> 
+          {% assign date = repo.updated_at | date: "%Y-%m-%d" | split: "-" %}
+          {% assign month_number = date[1] | minus: 1 %}
+          {{ date[2] }} de {{ months[month_number] }} de {{ date[0] }}
+        </div>
+      </div>
+    </a>
+</div>
