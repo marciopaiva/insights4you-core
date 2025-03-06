@@ -23,7 +23,7 @@ author:
 ### GitHub Repositories ###
 github:
   user: marciopaiva
-  token: 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
+  token: generate-a-token-on-github
 
 ### Posts ###
 permalink: /blog/:title
